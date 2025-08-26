@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essence Tracker 🌿</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>  
+<body class="bg-gray-100 font-sans px-4 sm:px-6 py-6">
+  <h1 class="text-2xl sm:text-3xl font-bold text-center text-green-700 mb-8 sm:mb-10">🌿 Essence Tracker</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4 sm:gap-x-6 max-w-6xl mx-auto">
+    {% for identity in identities %}
+    <a href="/identity/{{ identity.id }}"
+       class="block bg-white rounded-xl shadow hover:shadow-md transition p-6 hover:bg-green-50 border border-gray-100">
+      <div class="flex items-center mb-2">
+        <span class="text-2xl">{{ identity.emoji }}</span>
+        <span class="ml-3 text-lg font-semibold text-gray-800">{{ identity.statement }}</span>
+      </div>
+      <p class="text-sm text-gray-600">{{ identity.description }}</p>
+      <div class="mt-4 text-xs text-green-600 font-medium uppercase tracking-wide">
+        Status: {{ identity.status }}
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</body>
+</html>

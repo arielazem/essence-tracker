@@ -1,0 +1,50 @@
+# Bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Poetry virtual environments (optional if using .venv)
+.venv/
+env/
+venv/
+
+# Python environment and tooling
+*.env
+*.DS_Store
+*.egg-info/
+pip-log.txt
+poetry.lock.bak
+
+# VSCode settings
+.vscode/
+
+# Pytest / coverage / testing artifacts
+htmlcov/
+.coverage
+.tox/
+.cache/
+.pytest_cache/
+
+# Logs
+*.log
+
+# OS-specific
+Thumbs.db
+.DS_Store
+Icon?
+ehthumbs.db
+
+# FastAPI static/temp
+*.db
+*.sqlite
+*.bak
+
+# Render logs (if applicable)
+render-build.log
+
+# Ignore Gist dump (if pulling locally)
+gist_cache.json
+
+# Optional: ignore SQLite DB or cache files
+*.sqlite3

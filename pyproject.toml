@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "essence-tracker"
+version = "0.1.0"
+description = "Identity-based habit tracker"
+authors = ["arielazem"]
+readme = "README.md"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.116.1"
+uvicorn = "^0.35.0"
+jinja2 = "^3.1.6"
+httpx = "^0.28.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "uvicorn app.main:app --host 0.0.0.0 --port 10000"
